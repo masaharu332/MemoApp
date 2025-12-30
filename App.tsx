@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar'
+import { JSX } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
  const App =(): JSX.Element => {
