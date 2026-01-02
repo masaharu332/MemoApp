@@ -2,9 +2,13 @@ import { StatusBar } from 'expo-status-bar'
 import { JSX } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import Hello from './src/components/Hello'
+
  const App =(): JSX.Element => {
   return (
     <View style={styles.container}>
+      <Hello bang>World</Hello>
+      <Hello sytle={{ fontSize : 16}}>World</Hello> 
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
@@ -19,3 +23,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 })
+
+export default App
