@@ -3,6 +3,8 @@ import { JSX } from 'react'
 import Header from '../../components/Header'
 import MemoListItem from '../../components/MemoListItem'
 import CircleButton from '../../components/CircleButton'
+import { Entypo } from '@expo/vector-icons';
+import Icon  from '../../components/Icon'
 
 const List = (): JSX.Element => {
   return (
@@ -13,7 +15,9 @@ const List = (): JSX.Element => {
         <MemoListItem />
         <MemoListItem />
       </View>
-      <CircleButton>＋</CircleButton>
+      <CircleButton>
+        <Icon />
+      </CircleButton>
     </View>
   )
 }
