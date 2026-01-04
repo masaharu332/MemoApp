@@ -2,7 +2,8 @@ import { View, Text, StyleSheet, ScrollView } from "react-native"
 import { JSX, memo } from "react"
 import Header from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
-import { Entypo } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons'
+import Icon from "../../components/Icon"
 
 const Detail = (): JSX.Element => {
     return (
@@ -20,7 +21,7 @@ const Detail = (): JSX.Element => {
                 </Text>
             </ScrollView>
             <CircleButton style={{ top: 160, bottom: 'auto' }}>
-                <Entypo name="plus" size={40}/>
+                <Icon name="pencil" size={40} color="#ffffff" />
             </CircleButton>
         </View>
     )
