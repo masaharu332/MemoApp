@@ -5,18 +5,18 @@ import Button from "../../components/Buttun"
 import InputText from "../../components/InputText"
 
 
-const Login = (): JSX.Element => {
+const SignUp = (): JSX.Element => {
     return (
         <View style={styles.cotasiner}>
             <Header />
             <View style={styles.inner}>
-                <Text style={styles.title}>Log in</Text>
+                <Text style={styles.title}>Sign Up</Text>
                 <InputText value="EmailAdress" />
-                <InputText value="Password" /> 
+                <InputText value="Password" />
                 <Button label="Submit" />
                 <View style={styles.footer}>
-                    <Text style={styles.footerText}>Not registered?</Text>
-                    <Text style={styles.footerLink}>Sign Up Here!</Text>
+                    <Text style={styles.footerText}>Already Registerd?</Text>
+                    <Text style={styles.footerLink}>Log In</Text>
                 </View>
             </View>
             
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Login
+export default SignUp
