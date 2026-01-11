@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@babel/runtime": "^7.28.4",
     "@expo/vector-icons": "~15.0.3",
     "expo": "~54.0.30",
     "expo-constants": "~18.0.12",
@@ -17,8 +18,9 @@
     "expo-router": "~6.0.21",
     "expo-status-bar": "~3.0.9",
     "pretty-format": "^29.7.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-freeze": "^1.0.4",
     "react-is": "^19.1.0",
     "react-native": "^0.81.5",
     "react-native-gesture-handler": "~2.28.0",
