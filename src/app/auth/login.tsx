@@ -6,7 +6,7 @@ import { Link, router } from "expo-router"
 
 const handlePress = (): void => {
     // ログイン処理をここに実装
-    router.push('/memo/list')
+    router.replace('/memo/list')
 }
 
 

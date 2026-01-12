@@ -1,10 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native'
-import { JSX } from 'react'
+import { JSX, use } from 'react'
 import MemoListItem from '../../components/MemoListItem'
 import CircleButton from '../../components/CircleButton'
 import Icon  from '../../components/Icon'
-
-import { router } from 'expo-router';
+import { router, useNavigation } from 'expo-router'
+import { useEffect } from 'react'
+import LogOutButtton from '../../components/LogOutButton'
 
 const handlePress = (): void => {
   // メモ新規作成画面へ遷移
@@ -13,6 +14,15 @@ const handlePress = (): void => {
 
 
 const List = (): JSX.Element => {
+  const navigation = useNavigation()
+  useEffect(() => {
+        navigation.setOptions({
+      headerRight: () => { return <LogOutButtton /> },
+      headerRightContainerStyle: {
+        backgroundColor: 'transparent',
+      }
+    })
+  }, [])
   return (
     <View style={styles.container}>
       <View>

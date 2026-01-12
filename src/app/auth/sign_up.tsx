@@ -6,7 +6,7 @@ import { Link, router } from "expo-router"
 
 const handlePress = (): void => {
     // サインアップ処理をここに実装
-    router.push('/auth/login')
+    router.replace('/auth/login')
 }
 
 const SignUp = (): JSX.Element => {
