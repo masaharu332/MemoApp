@@ -1,8 +1,6 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native"
-import { JSX, memo } from "react"
-import Header from "../../components/Header"
+import { JSX } from "react"
 import CircleButton from "../../components/CircleButton"
-import { Entypo } from '@expo/vector-icons'
 import Icon from "../../components/Icon"
 import { router } from "expo-router"
 
@@ -14,7 +12,6 @@ const handlePress = (): void => {
 const Detail = (): JSX.Element => {
     return (
         <View style={styles.container}>
-            <Header />
             <View style={styles.memoHeader}>
                 <Text style={styles.memoTitle}>買い物リスト</Text>
                 <Text style={styles.memoDate}>2025年10月1日</Text>
@@ -26,7 +23,7 @@ const Detail = (): JSX.Element => {
                     3. パン
                 </Text>
             </ScrollView>
-            <CircleButton onPress={handlePress} style={{ top: 160, bottom: 'auto' }}>
+            <CircleButton onPress={handlePress} style={{ top: 60, bottom: 'auto' }}>
                 <Icon name="pencil" size={40} color="#ffffff" />
             </CircleButton>
         </View>

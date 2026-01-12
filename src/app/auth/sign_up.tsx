@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
 import { JSX } from "react"
-import Header from "../../components/Header"
 import Button from "../../components/Buttun"
 import InputText from "../../components/InputText"
 import { Link, router } from "expo-router"
@@ -13,7 +12,6 @@ const handlePress = (): void => {
 const SignUp = (): JSX.Element => {
     return (
         <View style={styles.cotasiner}>
-            <Header />
             <View style={styles.inner}>
                 <Text style={styles.title}>Sign Up</Text>
                 <InputText value="EmailAdress" />

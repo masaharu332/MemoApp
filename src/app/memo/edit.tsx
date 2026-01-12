@@ -1,8 +1,6 @@
-import { View, TextInput, StyleSheet, ScrollView, KeyboardAvoidingView } from "react-native"
-import { JSX, memo } from "react"
-import Header from "../../components/Header"
+import { View, TextInput, StyleSheet, KeyboardAvoidingView } from "react-native"
+import { JSX } from "react"
 import CircleButton from "../../components/CircleButton"
-import { Entypo } from '@expo/vector-icons'
 import Icon from "../../components/Icon"
 import { router } from "expo-router"
 
@@ -14,7 +12,6 @@ const handlePress =(): void => {
 const Edit = (): JSX.Element => {
     return (
         <KeyboardAvoidingView behavior='height' style={styles.container}>
-            <Header />
             <View style={styles.inputContainer}>
                 <TextInput multiline style={styles.input} value={'買い物\nリスト'}></TextInput>
             </View>
