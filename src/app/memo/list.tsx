@@ -6,6 +6,14 @@ import CircleButton from '../../components/CircleButton'
 import { Entypo } from '@expo/vector-icons';
 import Icon  from '../../components/Icon'
 
+import { router } from 'expo-router';
+
+const handlePress = (): void => {
+  // メモ新規作成画面へ遷移
+    router.push('/memo/create') 
+}
+
+
 const List = (): JSX.Element => {
   return (
     <View style={styles.container}>
@@ -15,7 +23,7 @@ const List = (): JSX.Element => {
         <MemoListItem />
         <MemoListItem />
       </View>
-      <CircleButton>
+      <CircleButton onPress={handlePress}>
         <Icon name="plus" size={40} color="#fff" />
       </CircleButton>
     </View>

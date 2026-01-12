@@ -4,6 +4,12 @@ import Header from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
 import { Entypo } from '@expo/vector-icons'
 import Icon from "../../components/Icon"
+import { router } from "expo-router"
+
+const handlePress = (): void => {
+    // 編集画面へ遷移する処理をここに実装
+    router.push('/memo/edit')
+}
 
 const Detail = (): JSX.Element => {
     return (
@@ -20,7 +26,7 @@ const Detail = (): JSX.Element => {
                     3. パン
                 </Text>
             </ScrollView>
-            <CircleButton style={{ top: 160, bottom: 'auto' }}>
+            <CircleButton onPress={handlePress} style={{ top: 160, bottom: 'auto' }}>
                 <Icon name="pencil" size={40} color="#ffffff" />
             </CircleButton>
         </View>
