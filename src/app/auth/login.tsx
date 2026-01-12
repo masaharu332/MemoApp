@@ -3,6 +3,7 @@ import { JSX } from "react"
 import Header from "../../components/Header"
 import Button from "../../components/Buttun"
 import InputText from "../../components/InputText"
+import { Link } from "expo-router"
 
 
 const Login = (): JSX.Element => {
@@ -16,9 +17,11 @@ const Login = (): JSX.Element => {
                 <Button label="Submit" />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Not registered?</Text>
-                    <TouchableOpacity>
-                        <Text style={styles.footerLink}>Sign Up Here!</Text>
-                    </TouchableOpacity>
+                    <Link href='/auth/sign_up' asChild>
+                        <TouchableOpacity>
+                            <Text style={styles.footerLink}>Sign Up Here!</Text>
+                        </TouchableOpacity>
+                    </Link>
                 </View>
             </View>
             
