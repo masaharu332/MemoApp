@@ -3,8 +3,12 @@ import { JSX } from "react"
 import Header from "../../components/Header"
 import Button from "../../components/Buttun"
 import InputText from "../../components/InputText"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
 
+const handlePress = (): void => {
+    // サインアップ処理をここに実装
+    router.push('/auth/login')
+}
 
 const SignUp = (): JSX.Element => {
     return (
@@ -14,7 +18,7 @@ const SignUp = (): JSX.Element => {
                 <Text style={styles.title}>Sign Up</Text>
                 <InputText value="EmailAdress" />
                 <InputText value="Password" />
-                <Button label="Submit" />
+                <Button label="Submit" onPress={handlePress}/>
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Already Registerd?</Text>
                     <Link href='/auth/login' asChild>

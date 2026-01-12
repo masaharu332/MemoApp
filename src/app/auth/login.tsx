@@ -3,7 +3,12 @@ import { JSX } from "react"
 import Header from "../../components/Header"
 import Button from "../../components/Buttun"
 import InputText from "../../components/InputText"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
+
+const handlePress = (): void => {
+    // ログイン処理をここに実装
+    router.push('/memo/list')
+}
 
 
 const Login = (): JSX.Element => {
@@ -14,7 +19,7 @@ const Login = (): JSX.Element => {
                 <Text style={styles.title}>Log in</Text>
                 <InputText value="EmailAdress" />
                 <InputText value="Password" /> 
-                <Button label="Submit" />
+                <Button label="Submit" onPress={handlePress} />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Not registered?</Text>
                     <Link href='/auth/sign_up' asChild>
