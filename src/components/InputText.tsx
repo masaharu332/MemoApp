@@ -1,15 +1,23 @@
 import { View, Text, StyleSheet, type ViewStyle, TextInput } from 'react-native'
 import { JSX } from 'react'
+import { useState } from 'react'
 
 interface Props {
-    value: String
+    value: String;
 }
 
 const InputText = (props: Props) : JSX.Element => {
-    const { value } = props
+    const {value} = props
+    const [inputValue, setInputValue] = useState('');
     return (
         <View>
-            <TextInput style={styles.input}>{value}</TextInput>
+            <TextInput 
+              style={styles.input}
+              value={inputValue}
+              onChangeText={(text) => setInputValue(text)}
+              placeholder={props.value as string}> 
+              
+            </TextInput>
         </View>
     )
 }
