@@ -1,13 +1,15 @@
-import { View, Text, StyleSheet, type ViewStyle, TextInput } from 'react-native'
+import { View, StyleSheet, TextInput, TextInputProps } from 'react-native'
 import { JSX } from 'react'
 import { useState } from 'react'
 
 interface Props {
-    value: String;
+    value: string;
+    secureTextEntry?: boolean;
+    textContentType?: TextInputProps['textContentType'];
 }
 
 const InputText = (props: Props) : JSX.Element => {
-    const {value} = props
+    const {value, secureTextEntry, textContentType} = props
     const [inputValue, setInputValue] = useState('');
     return (
         <View>
@@ -15,9 +17,12 @@ const InputText = (props: Props) : JSX.Element => {
               style={styles.input}
               value={inputValue}
               onChangeText={(text) => setInputValue(text)}
-              placeholder={props.value as string}> 
-              
-            </TextInput>
+              placeholder={props.value}
+              autoCapitalize='none'
+              keyboardType={secureTextEntry ? 'default' : 'email-address'}
+              secureTextEntry ={!!props.secureTextEntry}
+              textContentType={textContentType}
+              />
         </View>
     )
 }

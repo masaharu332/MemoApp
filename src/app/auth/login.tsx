@@ -15,8 +15,8 @@ const Login = (): JSX.Element => {
         <View style={styles.cotasiner}>
             <View style={styles.inner}>
                 <Text style={styles.title}>Log in</Text>
-                <InputText value="EmailAdress" />
-                <InputText value="Password" /> 
+                <InputText value="EmailAdress" textContentType='emailAddress'/>
+                <InputText value="Password" secureTextEntry={true} textContentType='password'/>
                 <Button label="Submit" onPress={handlePress} />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Not registered?</Text>
